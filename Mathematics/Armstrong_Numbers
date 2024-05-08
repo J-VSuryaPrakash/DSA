@@ -1,0 +1,19 @@
+class Solution {
+    static String armstrongNumber(int n){
+        
+        int temp = n,rem;
+        double sum = 0;
+        
+        while(temp > 0)
+        {
+            rem = temp%10;
+            sum = sum + Math.pow(rem,3);
+            temp = temp/10;
+        }
+        
+        if(sum == n)
+           return "Yes";
+           
+        return "No";   
+    }
+}
